@@ -8,6 +8,7 @@
 'use strict';
 
 var path = require('path');
+var file = require('fs-utils');
 var Options = require('options-cache');
 var _ = require('lodash');
 var extend = _.extend;
