@@ -8,11 +8,11 @@
 'use strict';
 
 var path = require('path');
+var inspect = require('util');
 var file = require('fs-utils');
 var Options = require('options-cache');
 var _ = require('lodash');
 var extend = _.extend;
-
 
 
 /**
@@ -77,6 +77,11 @@ helpers.init = function(opts) {
 helpers.config = function(config) {
   this.options = extend({}, this.options, config);
   return this;
+};
+
+
+helpers.inspect = function(obj) {
+  return util.inspect(obj, null, 10));
 };
 
 

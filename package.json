@@ -1,7 +1,7 @@
 {
   "name": "test-helpers",
   "description": "Node.js path and fs helpers for things like reading fixtures and writing results while running tests. ",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/jonschlinkert/test-helpers",
   "author": {
     "name": "Jon Schlinkert",
