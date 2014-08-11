@@ -1,0 +1,57 @@
+{
+  "name": "test-helpers",
+  "description": "Node.js path and fs helpers for things like reading fixtures and writing results while running tests. ",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/test-helpers",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/test-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/test-helpers/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/test-helpers/blob/master/LICENSE-MIT"
+    }
+  ],
+  "keywords": [
+    "helper",
+    "helpers",
+    "test",
+    "tests",
+    "mocha",
+    "should",
+    "chai",
+    "unit",
+    "fixtures",
+    "fixture",
+    "actual",
+    "utils",
+    "util",
+    "utility",
+    "utilities"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "^4.0.4",
+    "verb": ">= 0.2.6"
+  },
+  "dependencies": {
+    "fs-utils": "^0.4.3",
+    "lodash": "^2.4.1",
+    "options-cache": "^0.2.0"
+  }
+}
