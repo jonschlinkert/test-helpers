@@ -8,7 +8,7 @@
 'use strict';
 
 var path = require('path');
-var inspect = require('util');
+var util = require('util');
 var file = require('fs-utils');
 var Options = require('options-cache');
 var _ = require('lodash');
@@ -30,10 +30,14 @@ var extend = _.extend;
 
 function helpers (options) {
   extend(helpers, Options.prototype);
-  helpers.init(options || {});
+  var opts = extend({}, options);
+
+  helpers.option('dir', opts.dir || 'test');
+  helpers.option('fixtures', helpers.options.dir + '/fixtures');
+  helpers.option('actual', helpers.options.dir + '/actual');
+  helpers.config(opts);
   return helpers;
 }
-
 
 
 /**
@@ -44,19 +48,6 @@ function helpers (options) {
 
 helpers.options = helpers.options || {};
 
-
-/**
- * Initialize defaults.
- *
- * @api private
- */
-
-helpers.init = function(opts) {
-  this.option('dir', 'test');
-  this.option('fixtures', this.options.dir + '/fixtures');
-  this.option('actual', this.options.dir + '/actual');
-  this.config(opts);
-};
 
 /**
  * Extend the options with the given `config`
@@ -75,13 +66,13 @@ helpers.init = function(opts) {
  */
 
 helpers.config = function(config) {
-  this.options = extend({}, this.options, config);
+  extend(this.options, config);
   return this;
 };
 
 
 helpers.inspect = function(obj) {
-  return util.inspect(obj, null, 10));
+  return util.inspect(obj, null, 10);
 };
 
 
